@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
+#include <conio.h> //her bruger vi conio.h til at kunne bruge getch
 #include <time.h>
 #include <unistd.h>
 #include "header.h"
@@ -16,7 +16,7 @@ manuscript *read_manuscript(int file_index, char *file_names[3])
         exit(EXIT_FAILURE);
     }
 
-    manuscript *manuscript_ptr = malloc(16 * sizeof(manuscript));
+    manuscript *manuscript_ptr = (manuscript *) malloc(16 * sizeof(manuscript));
     int i = 0;
 
     for (i = 0; i < 16; i++)
